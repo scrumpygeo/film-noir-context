@@ -5,10 +5,8 @@ const FilmDetails = ({ film }) => {
   const { removeFilm } = useContext(FilmContext)
   return (
     <li onClick={() => removeFilm(film.id)}>
-      <p>
-        <strong>Movie: </strong> {film.title} <strong>Director: </strong>{' '}
-        {film.director}
-      </p>
+      <p className='title'>{film.title}</p>
+      <p className='director'>{film.director}</p>
     </li>
   )
 }
