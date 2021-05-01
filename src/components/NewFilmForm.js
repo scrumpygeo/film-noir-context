@@ -16,7 +16,6 @@ const NewFilmForm = () => {
     <form onSubmit={handleSubmit}>
       <input
         type='text'
-        name='name'
         placeholder='Film Title'
         value={title}
         onChange={(e) => setTitle(e.target.value)}
@@ -25,7 +24,6 @@ const NewFilmForm = () => {
 
       <input
         type='text'
-        name='director'
         placeholder='Director'
         value={director}
         onChange={(e) => setDirector(e.target.value)}
