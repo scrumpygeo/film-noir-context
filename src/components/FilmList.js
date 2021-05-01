@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { FilmContext } from '../contexts/FilmContext'
+import FilmDetails from '../components/FilmDetails'
 
 const FilmList = () => {
   const { films } = useContext(FilmContext)
@@ -7,7 +8,7 @@ const FilmList = () => {
     <div>
       <ul>
         {films.map((film) => {
-          return <li>{film.title}</li>
+          return <FilmDetails film={film} key={film.id} />
         })}
       </ul>
     </div>
